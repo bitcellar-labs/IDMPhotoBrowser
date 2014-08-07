@@ -49,6 +49,7 @@
 @property (nonatomic) BOOL arrowButtonsChangePhotosAnimated;
 
 @property (nonatomic) BOOL forceHideStatusBar;
+@property (nonatomic) BOOL reverseStatusBarStyle;
 @property (nonatomic) BOOL usePopAnimation;
 
 // defines zooming of the background (default 1.0)

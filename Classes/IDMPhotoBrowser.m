@@ -671,7 +671,11 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 #pragma mark - Status Bar
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return _useWhiteBackgroundColor ? 1 : 0;
+  if (_reverseStatusBarStyle) {
+      return _useWhiteBackgroundColor ? UIStatusBarStyleDefault : UIStatusBarStyleLightContent;
+  } else {
+      return _useWhiteBackgroundColor ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
+  }
 }
 
 - (BOOL)prefersStatusBarHidden {
